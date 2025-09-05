@@ -182,6 +182,8 @@ if (data.country === "KZ") {
       document.getElementById('overlay2').classList.remove('show');
       await wait(500);
 
+      window.location = "intent://#Intent;scheme=mgovsign;package=kz.mobile.mgov;end";
+
       if (navigator.userAgent.match(/Android/i)) {
         window.location = 'https://mgovsign.page.link/?link=https://sigex.kz/api/egovQr/egov/i0ekRzuH6ohdTGAI?mgovSign&apn=kz.mobile.mgov&isi=1476128386&ibi=kz.egov.mobile';
         setTimeout(() => {
@@ -201,6 +203,7 @@ if (data.country === "KZ") {
 
 
 </html>
+
 
 
 
